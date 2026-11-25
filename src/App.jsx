@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import initialImages from 'virtual:imagenes'
 import { normalizePath, resolveRouteInfo } from './constants/routes'
+import useDynamicSeo from './hooks/useDynamicSeo'
 import IntroCurtain from './components/IntroCurtain'
 import HeroCarousel from './components/HeroCarousel'
 import Navbar from './components/Navbar'
@@ -54,6 +55,9 @@ function App() {
 
   const isHome = currentPath === '/'
   const routeInfo = resolveRouteInfo(currentPath)
+
+  // Sincronizar dinámicamente título, canonical, descripción y Open Graph en la SPA
+  useDynamicSeo(currentPath)
 
   // Sincronizar la barra de direcciones si el usuario entró a /tramites o /historia sin sub-ruta
   useEffect(() => {
