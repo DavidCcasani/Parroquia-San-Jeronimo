@@ -13,8 +13,8 @@ function HistoriaPage({ activeChapter: propChapter }) {
   return (
     <PageShell title="Historia">
       <div className="space-y-8">
-        {/* Música sacra andina (Hanaqpachap Kusikuynin) exclusiva de la vista Historia */}
-        <HistoriaAudioPlayer />
+        {/* Música sacra andina flotante en las sub-vistas Arquitectura y Párrocos (en Creación ya está integrado en el libro) */}
+        {activeChapter !== 'creacion' && <HistoriaAudioPlayer />}
 
         <ImageLightboxModal
           selectedImage={selectedImage}

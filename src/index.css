@@ -31,3 +31,12 @@ html {
 .animate-heartbeat {
   animation: heartbeat 1.6s ease-in-out infinite;
 }
+
+/* Sombreado interior natural de unión de páginas para el libro page-flip */
+.stf__item.--left:not(.--hard) {
+  box-shadow: inset -7px 0 24px -7px rgba(0, 0, 0, 0.25);
+}
+
+.stf__item.--right:not(.--hard) {
+  box-shadow: inset 7px 0 24px -7px rgba(0, 0, 0, 0.25);
+}
