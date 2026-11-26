@@ -481,8 +481,23 @@ function CreacionHistoriaSection({ onSelectImage }) {
         </div>
 
         {/* Nota explicativa para el lector */}
-        <p className="mt-3 text-[11px] text-slate-500 text-center max-w-lg leading-relaxed">
-          📖 <strong>Lectura interactiva:</strong> Haz clic o arrastra las esquinas para pasar de página. El avance automático se detiene en cuanto interactúas con el libro.
+        <p className="mt-3 text-[11px] text-slate-500 text-center max-w-lg leading-relaxed inline-flex items-center justify-center gap-1.5 flex-wrap">
+          <svg
+            className="w-3.5 h-3.5 text-[#5e1224] shrink-0 inline"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          <span>
+            <strong>Lectura interactiva:</strong> Haz clic o arrastra las esquinas para pasar de página. El avance automático se detiene en cuanto interactúas con el libro.
+          </span>
         </p>
       </div>
 
@@ -502,552 +517,479 @@ function CreacionHistoriaSection({ onSelectImage }) {
           {/* Cintillo Sutil Superior */}
           <div className="relative z-10 pt-4 px-2">
             <span className="text-[10px] sm:text-[11px] font-serif italic text-[#c5a059]/90 block tracking-wide">
-              Ambientado con el himno virreinal Hanaqpachap Kusikuynin, 1631
+              Parroquia de San Jerónimo • Andahuaylas, Apurímac
             </span>
             <div className="w-16 h-0.5 bg-[#c5a059]/50 mx-auto my-2" />
           </div>
 
-          {/* Cuerpo Central: Título Principal, Emblema y Subtítulo */}
-          <div className="relative z-10 my-auto flex flex-col items-center px-2">
-            {/* Emblema Dorado */}
-            <div className="w-20 h-20 mb-4 p-2 rounded-full border-2 border-[#c5a059] bg-[#5e1224]/80 flex items-center justify-center shadow-inner">
-              <img
-                src="/imagenes/logo principal dorado.png"
-                alt="Emblema Parroquial"
-                className="w-14 h-14 object-contain filter drop-shadow"
-              />
-            </div>
-
-            <h1 className="text-xl sm:text-2xl lg:text-[25px] font-serif font-black tracking-wider uppercase text-white drop-shadow-md leading-tight mb-2.5">
-              CRÓNICA Y FUNDACIÓN DE SAN JERÓNIMO
+          {/* Cuerpo Central: Título Principal y Autor */}
+          <div className="relative z-10 my-auto flex flex-col items-center px-3">
+            <h1 className="text-xl sm:text-2xl lg:text-[24px] font-serif font-black tracking-wider uppercase text-white drop-shadow-md leading-tight mb-3">
+              RESEÑA HISTÓRICA DEL TEMPLO COLONIAL DE SAN JERÓNIMO
             </h1>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#c5a059] to-transparent my-1.5" />
-            <p className="text-xs sm:text-[13px] font-serif text-[#c5a059] tracking-wide max-w-sm leading-relaxed">
-              Memoria Histórica, Doctrina Colonial y Piedra Sagrada en el Valle de Chumbao
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#c5a059] to-transparent my-2" />
+            <p className="text-xs sm:text-sm font-serif text-[#c5a059] tracking-wide max-w-sm leading-relaxed mt-1">
+              Julio César Samanez Moreno
             </p>
           </div>
 
           {/* Pie de Portada */}
           <div className="relative z-10 pb-4">
             <p className="text-[11px] sm:text-xs tracking-widest uppercase text-[#c5a059] font-serif font-semibold">
-              Siglos XVI – XXI • Andahuaylas
+              Monumento Histórico del Perú • R.S. N.º 505-74-ED
             </p>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 1: EXORDIO Y DEDICATORIA (Izquierda)
+            PÁGINA 1 (I): INTRODUCCIÓN Y ANTECEDENTES (1533 - 1539)
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-3 border-b border-[#c5a059]/40 mb-5">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                In Nomine Domini
+          <div className="overflow-y-auto pr-1 space-y-3">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Reseña Histórica del Templo Colonial de San Jerónimo
               </span>
             </div>
 
-            <h2 className="text-lg sm:text-xl font-serif font-bold text-[#5e1224] mb-3 leading-snug">
-              Exordio a la Memoria Sagrada
-            </h2>
-
-            <p className="text-xs sm:text-[13px] leading-relaxed text-slate-700 font-serif mb-4 first-letter:text-3xl first-letter:font-bold first-letter:text-[#5e1224] first-letter:float-left first-letter:mr-2">
-              Bajo la mirada serena de los cerros tutelares y en el corazón fértil del valle del Chumbao, se levantó en la segunda mitad del siglo XVI la Doctrina de San Jerónimo. Este libro testimonial reúne los ecos de los primeros doctrineros, el tañido centenario de sus campanas de bronce, la maestría de su torre exenta de piedra sillar y la devoción viva de una comunidad que custodia con veneración su templo patrimonial.
+            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif text-justify first-letter:text-2xl first-letter:font-bold first-letter:text-[#5e1224] first-letter:float-left first-letter:mr-1.5">
+              El Templo Colonial de San Jerónimo, emplazado frente a la plaza principal del distrito de San Jerónimo, en la provincia de Andahuaylas, departamento de Apurímac, constituye uno de los testimonios más representativos de la historia religiosa, arquitectónica y cultural de esta localidad. Su presencia en el paisaje urbano, que se ha mantenido como referencia para la vida comunitaria a través de los siglos, invita a reconocer en sus muros, espacios litúrgicos, elementos ornamentales y expresiones de arte sacro no solamente una edificación de antigua tradición, sino también la memoria material y espiritual de un pueblo. El templo forma parte de la identidad jeronimiana y de una historia en la que la fe, la organización comunitaria, las celebraciones religiosas y la transmisión de costumbres han encontrado un espacio de continuidad.
             </p>
 
-            <blockquote className="p-3 my-3 bg-[#5e1224]/5 border-l-2 border-[#5e1224] rounded-r-lg text-[11px] italic text-[#5e1224] font-serif leading-relaxed">
-              «¡Cuán amables son tus moradas, Señor de los ejércitos! Mi alma suspira y desfallece por los atrios del Señor.»
-              <span className="block text-right font-sans not-italic text-[10px] text-slate-500 mt-1">
-                — Salmo 84, 2
-              </span>
-            </blockquote>
+            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif text-justify">
+              Los antecedentes de la parroquia de San Jerónimo podrían situarse en los primeros años de la presencia española en la región. En la obra <em>San Jerónimo el Mayor</em>, de don Américo Alvarado, se recoge una referencia atribuida al notable intelectual andahuaylino Humberto Urquizo Ocampos, quien plantea que la fundación de la parroquia habría ocurrido dentro del período comprendido entre el 17 de noviembre de 1533 y el 15 de abril de 1539, sin establecer una fecha exacta. Según la referencia que recoge Alvarado, dicho planteamiento habría sido publicado en una revista número 1, editada por Ángel Tarazona. Este dato constituye una aproximación que merece ser considerada dentro de la investigación histórica local, con la prudencia que exige la naturaleza de la fuente y la ausencia, hasta el momento, de una fecha definitiva. En consecuencia, conviene distinguir la posible fundación de la parroquia como institución eclesiástica de la construcción del edificio que hoy se conserva, puesto que el establecimiento parroquial y la fábrica material del templo pudieron corresponder a momentos diferentes de un proceso histórico más amplio.
+            </p>
           </div>
 
-          <div className="pt-3 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Parroquia San Jerónimo</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Antecedentes Históricos</span>
             <span>— I —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 2: LA JOYA MUSICAL VIRREINAL (Derecha)
+            PÁGINA 2 (II): LA PARROQUIA TEMPRANA Y DATACIÓN HACIA 1600
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Música Sacra Virreinal &bull; 1631
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Organización Religiosa y Datación
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              «Hanaqpachap Kusikuynin»
-            </h2>
-
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Publicado en 1631 en el ritual formulario del párroco Juan Pérez Bocanegra en el Cusco, es la primera obra polifónica coral a cuatro voces impresa en todo el continente americano.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La referencia a una parroquia temprana permite aproximarnos al papel que la organización religiosa pudo desempeñar en la formación y consolidación del asentamiento. En el período colonial, las parroquias constituyeron espacios de culto, administración de sacramentos, enseñanza de la doctrina y articulación de la vida comunitaria. Sin atribuir al templo de San Jerónimo acontecimientos que todavía requieren comprobación documental, resulta posible comprender su historia dentro de ese contexto general, en el que la institución parroquial tuvo una importancia central en la vida cotidiana de las poblaciones. La historia precisa de sus primeros sacerdotes, sus bienes, sus cofradías, sus obras y sus sucesivas intervenciones arquitectónicas deberá seguir investigándose a través de registros parroquiales, documentos eclesiásticos, archivos y fuentes locales.
             </p>
 
-            {/* Versos en Quechua y Castellano */}
-            <div className="p-3 bg-amber-50/70 border border-[#c5a059]/50 rounded-xl mb-3 text-[10px] font-serif leading-relaxed grid grid-cols-2 gap-2">
-              <div>
-                <p className="font-bold text-[#5e1224] uppercase mb-1">Quechua (1631)</p>
-                <p className="italic text-slate-800 leading-normal">
-                  Hanaqpachap kusikuynin,<br />
-                  Waranqaktam much'asqayki,<br />
-                  Yupaychaypaq yurawaqi,<br />
-                  Runap maskanankupaq,<br />
-                  Uyariy rimaynillayta.
-                </p>
-              </div>
-              <div>
-                <p className="font-bold text-[#5e1224] uppercase mb-1">Castellano</p>
-                <p className="italic text-slate-700 leading-normal">
-                  Alegría del cielo,<br />
-                  mil veces te alabaré,<br />
-                  árbol sagrado y bendito,<br />
-                  esperanza del mortal,<br />
-                  atiende a mi plegaria.
-                </p>
-              </div>
-            </div>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              En cuanto a la edificación, la ficha de inventario turístico del Ministerio de Comercio Exterior y Turismo, MINCETUR, sitúa la construcción del templo aproximadamente hacia el año 1600. Esta datación constituye una referencia importante para comprender su antigüedad y su vinculación con la arquitectura religiosa de tradición colonial en la región, aunque no debe interpretarse como una fecha exacta para todos los elementos que integran el conjunto. Los templos históricos suelen ser resultado de diferentes etapas de construcción, adecuación, reparación, ornamentación y conservación, por lo que su configuración actual puede reunir componentes de diversas épocas. La aproximación cronológica consignada por el MINCETUR permite, por tanto, situar el edificio dentro de una perspectiva histórica, dejando abierta la posibilidad de precisar su evolución mediante investigaciones futuras.
+            </p>
 
-            {/* Fotografía de la pintura mural del coro */}
             <div
-              data-zoom-src="/imagenes/imagenes arqui/20220526115751_IMG_7176.JPG"
-              data-zoom-title="Pintura mural del sotocoro colonial"
-              data-zoom-caption="Pintura mural virreinal con motivos florales andinos donde resonaba el canto sagrado."
+              data-zoom-src="/imagenes/imagenes historia/7.jpg"
+              data-zoom-title="Templo Colonial de San Jerónimo y Plaza Principal"
+              data-zoom-caption="Vista histórica del Templo Colonial de San Jerónimo emplazado frente a la plaza principal."
               className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
-                src="/imagenes/imagenes arqui/20220526115751_IMG_7176.JPG"
-                alt="Pintura mural colonial"
-                className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/imagenes/imagenes historia/7.jpg"
+                alt="Templo Colonial de San Jerónimo"
+                className="w-full h-28 sm:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Canto y Liturgia</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Edificación Colonial</span>
             <span>— II —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 3: LA DOCTRINA COLONIAL Y EL TEMPLO (Izquierda)
+            PÁGINA 3 (III): ARQUITECTURA, PIEDRA CHECCO Y FACHADA PIRAMIDAL
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Capítulo I &bull; Los Orígenes
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Arquitectura, Piedra Checco y Fachada
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              La Doctrina Colonial
-            </h2>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La arquitectura del templo revela el empleo de materiales y técnicas constructivas vinculadas a la tradición local. En la descripción recogida en el documento original, se destacan sus muros de adobe y piedra, así como el trabajo de piedra labrada presente en elementos de la fachada y el ingreso. La portada, que enmarca el acceso principal, incorpora un arco elaborado con piedra sillar, identificada localmente como piedra checco, cuya presencia aporta carácter y solidez a la composición exterior. La combinación de materiales, el tratamiento de los vanos, las proporciones de la fachada y la relación de la edificación con la plaza permiten apreciar la manera en que el templo se integra al espacio urbano, constituyendo una referencia visual y simbólica para la población.
+            </p>
 
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Fundada en la segunda mitad del siglo XVI como doctrina de evangelización en territorio de la nación Chanka. El templo y su entorno conformaron el núcleo organizador de la fe cristiana, los sacramentos y la vida comunitaria.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La fachada presenta una composición que, de acuerdo con la descripción de base, se desarrolla con una disposición de carácter piramidal, en la que los elementos arquitectónicos contribuyen a dar jerarquía al acceso y a la estructura principal. Sus formas, materiales y detalles ornamentales reflejan una tradición constructiva que merece ser estudiada no solo desde la clasificación estilística, sino también desde la historia de las técnicas, los recursos disponibles y el trabajo de quienes participaron en su edificación y mantenimiento. En la lectura de su arquitectura es importante evitar atribuciones definitivas a maestros, talleres o estilos específicos cuando no se cuenta con documentación que los respalde, pero ello no impide reconocer la singularidad y el valor patrimonial de sus elementos.
             </p>
 
             <div
-              data-zoom-src="/imagenes/imagenes historia/7.jpg"
-              data-zoom-title="Perspectiva histórica de la Plaza y Templo"
-              data-zoom-caption="Registro fotográfico de la Plaza Mayor de San Jerónimo con su arboleda y el templo al fondo."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
+              data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2025-09-05 at 12.09.18 PM (3).jpeg"
+              data-zoom-title="Fachada de disposición piramidal y portada en piedra checco"
+              data-zoom-caption="Composición exterior del templo con portada de piedra sillar (piedra checco) y relación con el atrio."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
-                src="/imagenes/imagenes historia/7.jpg"
-                alt="Vista histórica de la plaza y templo"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/imagenes/imagenes historia/WhatsApp Image 2025-09-05 at 12.09.18 PM (3).jpeg"
+                alt="Fachada del templo"
+                className="w-full h-28 sm:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Fotografía histórica: Plaza Principal con el templo y su torre exenta.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Doctrina Chanka</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Muros y Portada</span>
             <span>— III —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 4: LA PLAZA MATRIZ Y EL ATRIO (Derecha)
+            PÁGINA 4 (IV): ORIENTACIÓN Y TORRE ESPADAÑA EXENTA
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Espacio Sagrado y Ciudad
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Orientación y Torre Espadaña Exenta
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              La Plaza Mayor y el Atrio
-            </h2>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La orientación de los templos cristianos ha sido objeto de interpretaciones litúrgicas y simbólicas a lo largo de la historia. En algunos casos, la disposición hacia el poniente o el oriente se relaciona con significados teológicos, prácticas rituales o tradiciones arquitectónicas. Para el caso específico del Templo de San Jerónimo, estas interpretaciones deben presentarse como referencias generales y no como explicaciones comprobadas de la decisión original de sus constructores, salvo que se encuentren documentos que así lo indiquen. Una reseña patrimonial rigurosa puede señalar el interés de su disposición arquitectónica, sin convertir las interpretaciones simbólicas en hechos históricos establecidos.
+            </p>
 
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              El amplio atrio de piedra adoquinada y la arboleda de la plaza fueron concebidos para acoger a miles de fieles durante las procesiones solemnes, la fiesta del Santo Patrón San Jerónimo y las magnas liturgias de Corpus Christi.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              Entre los elementos más notables del conjunto se encuentra la torre espadaña exenta, levantada a un costado del templo y descrita por el MINCETUR como una estructura de piedra caliza organizada en dos niveles, con espacios para alojar campanas. Su presencia, separada de la edificación principal, constituye una característica distintiva del paisaje arquitectónico y religioso de San Jerónimo. La espadaña no solo cumple una función constructiva y visual, sino que se relaciona directamente con la vida litúrgica, pues desde ella se convoca a los fieles, se anuncian celebraciones y se marcan determinados momentos de la jornada y del calendario religioso.
             </p>
 
             <div
-              data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2025-09-05 at 12.09.18 PM (3).jpeg"
-              data-zoom-title="Atrio y fachada principal"
-              data-zoom-caption="Vista actual del atrio de piedra y la fachada encalada del templo parroquial."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
+              data-zoom-src="/imagenes/imagenes historia/40.jpg"
+              data-zoom-title="Torre espadaña exenta de piedra caliza"
+              data-zoom-caption="Estructura exenta organizada en dos niveles a un costado del templo colonial."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
-                src="/imagenes/imagenes historia/WhatsApp Image 2025-09-05 at 12.09.18 PM (3).jpeg"
-                alt="Atrio y fachada actual"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/imagenes/imagenes historia/40.jpg"
+                alt="Torre espadaña exenta"
+                className="w-full h-28 sm:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Fachada principal y amplio atrio que articula la vida cívica y eclesial.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Atrio y Plaza</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Torre Espadaña</span>
             <span>— IV —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 5: EL CAMPANARIO EXENTO DE SILLAR (Izquierda)
+            PÁGINA 5 (V): LAS CAMPANAS HISTÓRICAS (1666 Y 1749)
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Capítulo II &bull; Cantería Andina
+          <div className="overflow-y-auto pr-1 space-y-3">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Las Campanas y la Memoria Colectiva
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              El Campanario Exento
-            </h2>
-
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Erigida con sillares de piedra labrada y calicanto, la torre campanario exenta está separada deliberadamente del templo para mitigar los sismos andinos, erigiéndose como vigía espiritual del valle.
+            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif text-justify">
+              La ficha consultada del MINCETUR menciona tres campanas y recoge inscripciones en latín, además de fechas que se remontan a 1666 y 1749. En el documento original, sin embargo, se señala la existencia de cuatro campanas, por lo que este aspecto deberá cotejarse mediante una observación directa, fotografías, registros o una fuente documental adicional antes de fijar el número definitivo en una publicación. Las campanas, por su antigüedad y por su función dentro de las prácticas religiosas, constituyen bienes patrimoniales de especial interés. Sus sonidos han acompañado la vida de la comunidad, anunciando misas, festividades, solemnidades, procesiones y acontecimientos que forman parte de la memoria colectiva. Para numerosas generaciones, el repique de estas campanas ha sido una señal familiar, vinculada a la fe, a los encuentros comunitarios y a la experiencia cotidiana del pueblo.
             </p>
 
             <div
-              data-zoom-src="/imagenes/imagenes historia/40.jpg"
-              data-zoom-title="Torre campanario de piedra sillar"
-              data-zoom-caption="Estructura exenta de tres vanos de medio punto construida con sillares de cantería fina."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
+              data-zoom-src="/imagenes/imagenes historia/img168.jpg"
+              data-zoom-title="Campanas históricas en la espadaña (1666 y 1749)"
+              data-zoom-caption="Las campanas de la espadaña cuyo repique ha acompañado por siglos la vida de la comunidad jeronimiana."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
-                src="/imagenes/imagenes historia/40.jpg"
-                alt="Torre campanario histórica"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/imagenes/imagenes historia/img168.jpg"
+                alt="Campanas del templo"
+                className="w-full h-40 sm:h-44 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Torre de tres vanos de medio punto: testimonio perenne de cantería colonial.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Cantería de Sillar</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Campanas Patrimoniales</span>
             <span>— V —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 6: LAS CAMPANAS CENTENARIAS (Derecha)
+            PÁGINA 6 (VI): EL ALTAR MAYOR Y EL RETABLO EN PAN DE ORO
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Voz de Bronce
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                El Altar Mayor y su Ornamentación
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              Campanas Virreinales
-            </h2>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              El interior del templo conserva elementos de arte religioso y ornamentación que contribuyen a su riqueza patrimonial. Sobresale el altar mayor, descrito en la ficha de inventario como tallado en madera y revestido de pan de oro, con rasgos ornamentales de tradición barroca y elementos que el registro interpreta con una inclinación hacia el neoclasicismo indígena. El retablo, por su composición, sus detalles y su presencia dentro del recinto, ocupa un lugar central en la organización del espacio litúrgico. Su valor no se limita a la riqueza visual o al trabajo artesanal, sino que se encuentra también en la función religiosa que ha desempeñado a lo largo del tiempo, como marco de la celebración eucarística y centro de atención y devoción de los fieles.
+            </p>
 
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Fundidas con aleaciones de bronce y plata donada por los feligreses virreinales, sus badajos anuncian el Alba, el Ángelus y la convocatoria a la Santa Eucaristía para toda la comarca.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La ornamentación del altar mayor, sus formas, relieves, columnas, molduras y elementos dorados —en la medida en que estos se encuentren efectivamente presentes y puedan ser identificados en el conjunto— debe apreciarse como parte de un lenguaje artístico y religioso que buscó dignificar el espacio destinado al culto. La atribución estilística y la datación de cada componente requieren, sin embargo, un estudio específico que permita distinguir las características originales de las posibles modificaciones, repintes, reparaciones o intervenciones posteriores. El retablo constituye así un bien que merece tanto la apreciación de la comunidad como el estudio y la conservación especializada.
             </p>
 
             <div
-              data-zoom-src="/imagenes/imagenes historia/img168.jpg"
-              data-zoom-title="Campanario y campanas al atardecer"
-              data-zoom-caption="Campanas virreinales de bronce fundido con vista panorámica hacia el cielo andahuaylino."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
+              data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.10 AM (1).jpeg"
+              data-zoom-title="Altar Mayor tallado en madera y revestido de pan de oro"
+              data-zoom-caption="El retablo mayor en el interior del templo, centro del espacio litúrgico y de la devoción de los fieles."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
-                src="/imagenes/imagenes historia/img168.jpg"
-                alt="Campanas virreinales"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.10 AM (1).jpeg"
+                alt="Altar Mayor del templo"
+                className="w-full h-28 sm:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Campanas de bronce que resuenan en la memoria colectiva de San Jerónimo.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Bronce Litúrgico</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Altar Mayor y Retablo</span>
             <span>— VI —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 7: EL UMBRAL Y LA CARPINTERÍA (Izquierda)
+            PÁGINA 7 (VII): ESCUELA CUSQUEÑA, PINTURA MURAL Y PUERTA TALLADA
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Capítulo III &bull; Portada y Umbral
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Expresiones Pictóricas y Puerta Principal
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              El Portón Monumental
-            </h2>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La ficha patrimonial también hace referencia a lienzos vinculados a la tradición de la Escuela Cusqueña y a pinturas murales que forman parte de la decoración interior. Estas expresiones pictóricas enriquecen el espacio y permiten reconocer la presencia de un repertorio iconográfico religioso, cuya interpretación puede contribuir a comprender las prácticas devocionales, los modelos artísticos y las formas de representación que circularon en la región. La pintura mural, los lienzos, la escultura, los retablos y los elementos arquitectónicos forman parte de un conjunto integrado, por lo que su conservación exige atender tanto a cada pieza individual como a la relación que mantiene con el entorno del templo. La documentación de sus temas, materiales, técnicas, estado de conservación y posibles restauraciones sería un aporte valioso para futuras investigaciones.
+            </p>
 
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Un arco de medio punto enmarcado en cantería da paso al portón de madera noble tachonada, labrado por carpinteros virreinales como portal de transición entre el mundo exterior y el sagrado.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              La puerta principal de madera tallada y los detalles ornamentales que acompañan el ingreso completan la expresión arquitectónica del templo. La madera, la piedra, el adobe, la pintura y los elementos dorados se reúnen en un conjunto que refleja la adaptación de técnicas, materiales y recursos a la tradición local. El valor de estos componentes reside en su materialidad, en la calidad del trabajo artesanal y en la historia de uso y cuidado que han experimentado. En conjunto, fachada, portada, muros, espadaña, campanas, retablo, lienzos, pinturas murales y otros bienes religiosos conforman un patrimonio que no debe contemplarse de manera fragmentaria, sino como una expresión histórica y cultural vinculada al desarrollo de San Jerónimo.
             </p>
 
             <div
               data-zoom-src="/imagenes/imagenes historia/IMG_20200926_172212553.jpg"
-              data-zoom-title="Portón monumental y umbral sagrado"
-              data-zoom-caption="Perspectiva desde el interior del templo a través del portón de madera hacia la plaza."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
+              data-zoom-title="Puerta principal de madera tallada e ingreso al templo"
+              data-zoom-caption="Vista del ingreso principal de madera tallada y arco de piedra que conecta el templo con la plaza."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
             >
               <img
                 src="/imagenes/imagenes historia/IMG_20200926_172212553.jpg"
-                alt="Portón colonial"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                alt="Puerta principal de madera tallada"
+                className="w-full h-28 sm:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
               </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              El umbral: umbral de bienvenida para generaciones de peregrinos.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Carpintería Colonial</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Arte Sacro y Portón</span>
             <span>— VII —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 8: CLAVAZÓN Y HERRAJES DE BRONCE (Derecha)
+            PÁGINA 8 (VIII): ALTARES, IMÁGENES Y ADVOCACIONES
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Artes Mecánicas y Cincelado
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Altares, Imágenes y Espacios de Devoción
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              Tachones y Aldabones
-            </h2>
-
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              El portón está tachonado con clavos ornamentales de bronce fundido con motivos zoomorfos de aves y leones, testimonios del arte mestizo donde la orfebrería andina dialoga con el barroco español.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              El documento original identifica asimismo distintos altares, imágenes y espacios de devoción que forman parte de la vida interior del templo. Entre las advocaciones y representaciones señaladas se encuentran la Virgen de la Candelaria, San Jerónimo, San Francisco de Asís, San Antonio de Padua, Santa Rosa de Lima, San Martín de Porres y el Señor de la Resurrección; el Señor Justo Juez; la Virgen de Fátima; la Sagrada Familia de Nazaret, junto a San José, la Virgen María y el Niño Jesús de Reyes, además de la representación de la Santísima Trinidad; el Señor de Exaltación, acompañado por la Virgen Dolorosa y San Juan; San Josemaría Escrivá de Balaguer y el Niño Jesús de Praga; la Virgen del Carmen; la Virgen del Rosario; la Virgen Dolorosa y el Santo Sepulcro; así como el Señor de la Caída o Jesús Nazareno. Esta relación se recoge a partir de la descripción original y deberá cotejarse en cuanto a denominaciones, ubicación y disposición actual, con el propósito de que la reseña refleje fielmente el conjunto devocional.
             </p>
 
-            {/* Galería de dos detalles en miniatura */}
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              <div
-                data-zoom-src="/imagenes/imagenes arqui/20220526120845_IMG_7203.JPG"
-                data-zoom-title="Aldabón monumental de bronce"
-                data-zoom-caption="Aldaba virreinal con follaje barroco y mascarón de león."
-                className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
-              >
-                <img
-                  src="/imagenes/imagenes arqui/20220526120845_IMG_7203.JPG"
-                  alt="Aldaba barroca"
-                  className="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <span className="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-black/60 text-white text-[8px] font-sans">
-                  🔍 Aldaba
-                </span>
-              </div>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              Cada altar y cada imagen posee una significación particular dentro de la vida religiosa de la comunidad. Las advocaciones marianas, las representaciones de Cristo, los santos y las escenas de la Sagrada Familia expresan una diversidad de formas de veneración, oración y memoria. Estos espacios han podido ser escenario de promesas, agradecimientos, súplicas, celebraciones y encuentros personales con la fe, experiencias que muchas veces se transmiten en el ámbito familiar y comunitario. La historia de los altares no se reduce a su descripción física: también se relaciona con las devociones que los sostienen, con las prácticas litúrgicas, con los custodios y benefactores, y con las generaciones que han contribuido a su cuidado. Investigar la procedencia de las imágenes, sus fechas, autores, donaciones y restauraciones permitirá enriquecer esta parte de la historia con mayor precisión.
+            </p>
 
-              <div
-                data-zoom-src="/imagenes/imagenes arqui/20220526120148_IMG_7187.JPG"
-                data-zoom-title="Tachón de bronce cincelado con figura de ave"
-                data-zoom-caption="Clavazón virreinal de bronce con figura zoomorfa labrada en relieve."
-                className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
-              >
-                <img
-                  src="/imagenes/imagenes arqui/20220526120148_IMG_7187.JPG"
-                  alt="Tachón de ave"
-                  className="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <span className="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-black/60 text-white text-[8px] font-sans">
-                  🔍 Tachón
-                </span>
-              </div>
+            <div
+              data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.11 AM.jpeg"
+              data-zoom-title="Celebración litúrgica e imágenes devocionales en el altar"
+              data-zoom-caption="Celebración eucarística en el presbiterio del Templo de San Jerónimo."
+              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
+            >
+              <img
+                src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.11 AM.jpeg"
+                alt="Celebración litúrgica en el altar"
+                className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans inline-flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                <span>Ampliar</span>
+              </span>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Detalles de bronce forjado a mano que guarnecen el acceso principal.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Orfebrería y Bronce</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Advocaciones y Fe</span>
             <span>— VIII —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 9: EL RETABLO MAYOR EN PAN DE ORO (Izquierda)
+            PÁGINA 9 (IX): VIDA RELIGIOSA, SOCIAL Y LUGAR DE MEMORIA
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Capítulo IV &bull; Presbiterio y Altar
+          <div className="overflow-y-auto pr-1 space-y-2.5">
+            <div className="text-center pb-2 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Vida Comunitaria y Lugar de Memoria
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              El Retablo Mayor
-            </h2>
-
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              En el ábside del templo resplandece el Retablo Mayor tallado en madera de cedro y revestido en láminas de pan de oro, presidido por la efigie de San Jerónimo Doctor y lienzos de la célebre Escuela Cusqueña.
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              El templo ha sido, además, un escenario fundamental para la vida religiosa y social de San Jerónimo. En sus ambientes se han celebrado sacramentos que acompañan las distintas etapas de la vida: bautizos, matrimonios, celebraciones eucarísticas, momentos de oración, despedidas y otras expresiones de la vida cristiana. A través de las fiestas patronales, las procesiones, las solemnidades y las prácticas de religiosidad popular, el templo ha contribuido a mantener vínculos entre la parroquia y la población. Su historia se encuentra estrechamente relacionada con la experiencia de niños, jóvenes, adultos y ancianos, que han acudido a él por motivos de fe, tradición, necesidad espiritual o participación comunitaria.
             </p>
 
-            <div
-              data-zoom-src="/imagenes/retablo_mayor.jpg"
-              data-zoom-title="Retablo Mayor en pan de oro"
-              data-zoom-caption="Retablo barroco virreinal con columnas salomónicas y hornacinas doradas en el presbiterio."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
-            >
-              <img
-                src="/imagenes/retablo_mayor.jpg"
-                alt="Retablo Mayor"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
-              </span>
+            <p className="text-[11px] leading-relaxed text-slate-700 font-serif text-justify">
+              Para el pueblo jeronimiano, este espacio puede evocar recuerdos de infancia, la recepción de sacramentos, las festividades patronales, la oración junto a familiares, el repique de las campanas y la participación en las celebraciones que han marcado el calendario local. El templo, por tanto, es también un lugar de memoria: en él convergen experiencias individuales y colectivas que, aunque no siempre se encuentren registradas en documentos escritos, forman parte de la historia social y religiosa de la comunidad. La recogida responsable de testimonios orales, fotografías antiguas, recuerdos de celebraciones y relatos familiares podría contribuir a complementar la documentación histórica, distinguiendo siempre la memoria oral de los hechos que puedan corroborarse mediante fuentes documentales.
+            </p>
+
+            <div className="grid grid-cols-2 gap-2">
+              <div
+                data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.11 AM (1).jpeg"
+                data-zoom-title="Participación comunitaria y trabajos en el templo"
+                data-zoom-caption="Fotografía histórica del trabajo comunitario en el frontis y atrio del Templo de San Jerónimo."
+                className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
+              >
+                <img
+                  src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.11 AM (1).jpeg"
+                  alt="Trabajo comunitario en el templo"
+                  className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <span className="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-black/60 text-white text-[8px] font-sans inline-flex items-center gap-1">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                  <span>Ampliar</span>
+                </span>
+              </div>
+
+              <div
+                data-zoom-src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.10 AM.jpeg"
+                data-zoom-title="Conservación y cuidado de la fachada histórica"
+                data-zoom-caption="Registro fotográfico de las labores de conservación en la fachada y cerco de piedra del templo."
+                className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group"
+              >
+                <img
+                  src="/imagenes/imagenes historia/WhatsApp Image 2026-11-26 at 11.08.10 AM.jpeg"
+                  alt="Conservación de la fachada"
+                  className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <span className="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-black/60 text-white text-[8px] font-sans inline-flex items-center gap-1">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" /></svg>
+                  <span>Ampliar</span>
+                </span>
+              </div>
             </div>
-
-            <p className="text-[10px] text-slate-600 font-serif italic text-center">
-              Retablo Mayor en pan de oro: cumbre devocional y artística del templo.
-            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Retablo y Altar</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Memoria y Comunidad</span>
             <span>— IX —</span>
           </div>
         </div>
 
         {/* ==============================================================
-            PÁGINA 10: FE VIVA Y CUSTODIA PATRIMONIAL (Derecha)
+            PÁGINA 10 (X): MONUMENTO HISTÓRICO, CONSERVACIÓN Y LEGADO
             ============================================================== */}
         <div
           data-density="soft"
-          className="w-full h-full p-7 sm:p-9 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
+          className="w-full h-full p-6 sm:p-8 flex flex-col justify-between bg-[#fdfaf3] text-slate-800 relative overflow-hidden"
         >
-          <div>
-            <div className="text-center pb-2 border-b border-[#c5a059]/40 mb-3">
-              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#5e1224]">
-                Patrimonio Vivo &bull; Siglo XXI
+          <div className="overflow-y-auto pr-1 space-y-2">
+            <div className="text-center pb-1.5 border-b border-[#c5a059]/40">
+              <span className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[#5e1224]">
+                Monumento Histórico y Compromiso Patrimonial
               </span>
             </div>
 
-            <h2 className="text-base sm:text-lg font-serif font-bold text-[#5e1224] mb-2 leading-tight">
-              Fe y Esperanza que Continúan
-            </h2>
-
-            <p className="text-[11px] sm:text-xs leading-relaxed text-slate-700 font-serif mb-3">
-              Hoy, cuatro siglos después de sus primeros cimientos, la Parroquia San Jerónimo continúa congregando a las familias en torno a la mesa de la Palabra y la Eucaristía, preservando su fe y custodiando su patrimonio con amor.
+            <p className="text-[10.5px] leading-relaxed text-slate-700 font-serif text-justify">
+              Su valor como patrimonio histórico se encuentra reconocido mediante su declaración como Monumento Histórico del Perú, a través de la Resolución Suprema N.º 505-74-ED, del 10 de octubre de 1974, según la información consignada en la ficha de inventario turístico consultada. Este reconocimiento constituye una referencia importante para su protección y conservación, y resalta la necesidad de preservar los valores arquitectónicos, artísticos, históricos y culturales que representa. La condición patrimonial implica una responsabilidad compartida: el cuidado cotidiano, la atención a los daños, la documentación de sus bienes y la realización de intervenciones con criterios técnicos adecuados, respetando los materiales, las características y la integridad del conjunto.
             </p>
 
-            <div
-              data-zoom-src="/imagenes/imagenes arqui/14.jpg"
-              data-zoom-title="Imagen tutelar de San Jerónimo Doctor"
-              data-zoom-caption="Efigie colonial procesional de San Jerónimo con manto bordado en hilos de oro."
-              className="relative rounded-lg overflow-hidden border border-[#c5a059]/60 shadow-sm cursor-pointer group mb-2"
-            >
-              <img
-                src="/imagenes/imagenes arqui/14.jpg"
-                alt="Imagen patronal de San Jerónimo"
-                className="w-full h-36 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-sans">
-                🔍 Ampliar
-              </span>
-            </div>
+            <p className="text-[10.5px] leading-relaxed text-slate-700 font-serif text-justify">
+              La conservación del templo demanda el compromiso de la comunidad, de las autoridades, de las instituciones culturales y religiosas, así como de quienes investigan, documentan y difunden su historia. El registro de sus elementos arquitectónicos y artísticos, la revisión de fuentes, el estudio de los documentos parroquiales, la identificación de intervenciones anteriores y la recopilación de testimonios constituyen acciones que pueden fortalecer el conocimiento y la protección de este legado. Una reseña histórica no pretende cerrar la investigación, sino ofrecer una narración sustentada que reconozca los datos disponibles, señale las hipótesis con prudencia y deje abiertas las preguntas que aún requieren respuesta. En esa perspectiva, el templo continúa siendo objeto de interés histórico y patrimonial, cuyo estudio puede aportar nuevas luces sobre la trayectoria religiosa y cultural de San Jerónimo.
+            </p>
 
-            <blockquote className="p-2 bg-[#5e1224]/5 border-l-2 border-[#5e1224] text-[10px] italic text-[#5e1224] font-serif">
-              «Custodiar el templo es custodiar el alma de nuestro pueblo; en cada piedra labrada vive la fe de nuestros mayores.»
-            </blockquote>
+            <p className="text-[10.5px] leading-relaxed text-slate-700 font-serif text-justify">
+              El Templo Colonial de San Jerónimo reúne, en su arquitectura, sus bienes artísticos, sus altares, sus campanas y su vida litúrgica, una parte significativa de la historia del distrito. Los antecedentes de la parroquia, la hipótesis sobre su posible establecimiento entre 1533 y 1539, la referencia aproximada a la construcción hacia 1600, la espadaña, los elementos de piedra y madera, el retablo dorado, las pinturas y las imágenes devocionales conforman un legado que merece ser conocido y estudiado. Pero su significado no se agota en la antigüedad de sus muros ni en la descripción de sus componentes. Su valor más profundo se expresa en la memoria de las generaciones que han encontrado allí un lugar para celebrar, orar, agradecer, acompañarse y transmitir sus tradiciones.
+            </p>
+
+            <p className="text-[10.5px] leading-relaxed text-slate-700 font-serif text-justify">
+              Conservar y difundir la historia del templo significa reconocer que este patrimonio es parte de la identidad jeronimiana y que su significado continúa renovándose en el presente. Es una herencia que enlaza el pasado con las generaciones actuales y futuras, que invita a valorar la historia local y a asumir la responsabilidad de proteger aquello que ha sido transmitido. Desde una mirada histórica, religiosa y patrimonial, el Templo de San Jerónimo no es únicamente una construcción antigua: es un testimonio de la fe, del trabajo, de la memoria y de la continuidad cultural de un pueblo, cuya historia merece ser escrita, investigada y compartida con respeto, rigor y profundo sentido de pertenencia.
+            </p>
+
+            <p className="pt-1 text-right text-xs font-serif font-bold text-[#5e1224]">
+              Julio César Samanez Moreno
+            </p>
           </div>
 
-          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif">
-            <span>Comunidad y Fe</span>
+          <div className="pt-2 border-t border-[#c5a059]/30 flex justify-between items-center text-[10px] text-slate-500 font-serif shrink-0">
+            <span>Patrimonio e Identidad</span>
             <span>— X —</span>
           </div>
         </div>
@@ -1066,41 +1008,32 @@ function CreacionHistoriaSection({ onSelectImage }) {
           {/* Encabezado de Contraportada */}
           <div className="relative z-10 pt-4">
             <span className="text-[10px] uppercase tracking-[0.25em] font-serif text-[#c5a059]/80">
-              Finis Coronat Opus
+              Reseña Histórica Patrimonial
             </span>
             <div className="w-12 h-0.5 bg-[#c5a059] mx-auto my-2" />
           </div>
 
           {/* Centro de Contraportada */}
-          <div className="relative z-10 my-auto flex flex-col items-center">
-            {/* Cruz Heráldica / Logo */}
-            <div className="w-16 h-16 mb-3 p-1.5 rounded-full border border-[#c5a059] bg-[#5e1224]/80 flex items-center justify-center">
-              <img
-                src="/imagenes/logo navbar dorado.png"
-                alt="Logo Parroquial"
-                className="w-11 h-11 object-contain filter drop-shadow"
-              />
-            </div>
-
+          <div className="relative z-10 my-auto flex flex-col items-center px-3">
             <h3 className="text-lg sm:text-xl font-serif font-bold text-white tracking-wider uppercase mb-1">
-              Parroquia San Jerónimo
+              Templo Colonial de San Jerónimo
             </h3>
-            <p className="text-[11px] font-serif italic text-[#c5a059] mb-3">
-              «Laetentur Caeli &bull; Alégrense los Cielos»
+            <p className="text-xs font-serif italic text-[#c5a059] mb-3">
+              Texto: Julio César Samanez Moreno
             </p>
 
             <div className="w-20 h-px bg-[#c5a059]/60 my-2" />
 
             <p className="text-[10px] text-slate-200/80 font-serif max-w-xs leading-relaxed">
-              Diócesis de Abancay &bull; Andahuaylas, Apurímac<br />
-              Este compendio histórico fue compilado para la memoria y edificación de la comunidad de fieles y visitantes.
+              Distrito de San Jerónimo • Provincia de Andahuaylas<br />
+              Departamento de Apurímac, Perú
             </p>
           </div>
 
           {/* Pie de Contraportada */}
           <div className="relative z-10 pb-4">
             <p className="text-[9px] uppercase tracking-widest text-[#c5a059]/70 font-serif">
-              Deo Gratias &bull; A.D. 2026
+              Monumento Histórico del Perú • R.S. N.º 505-74-ED
             </p>
           </div>
         </div>
